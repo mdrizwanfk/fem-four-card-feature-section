@@ -1,0 +1,207 @@
+:root {
+  --breakpoint-mobile-tablet: 425px;
+  --breakpoint-tablet-desktop: 992px;
+
+  font-size: 62.5%;
+
+  --clr-primary-1: hsl(0, 78%, 62%);
+  --clr-primary-2: hsl(180, 62%, 55%);
+  --clr-primary-3: hsl(34, 97%, 64%);
+  --clr-primary-4: hsl(212, 86%, 64%);
+  --clr-neutral-1: hsl(234, 12%, 34%);
+  --clr-neutral-2: hsl(229, 6%, 66%);
+  --clr-neutral-3: hsl(0, 0%, 98%);
+
+  --fs-500: 1.5rem;
+
+  --fs-body: var(--fs-500);
+  --fs-heading: calc(var(--fs-500) + 1rem);
+
+  --ff-primary: "Poppins", sans-serif;
+
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+/* Large Viewports */
+@media screen and (min-width: 992px) {
+  :root {
+  }
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Disabling Text Selection by User */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Disabling Image Dragging */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* FEM Attribution */
+.attribution {
+  margin-bottom: 3rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--clr-primary-4);
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-400);
+  color: var(--clr-neutral-1);
+}
+
+main {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+main > h1 {
+  font-weight: var(--fw-200);
+  font-size: var(--fs-heading);
+}
+
+main > h2 {
+  font-weight: var(--fw-600);
+  font-size: var(--fs-heading);
+  margin-bottom: 2rem;
+}
+
+main > p {
+  font-weight: var(--fw-400);
+  max-width: 60rem;
+}
+
+/* Card Layout */
+.cards-container {
+  position: relative;
+  height: 60rem;
+}
+
+/* Card */
+.card-wrapper {
+  width: 30rem;
+  /* min-height: 20rem; */
+  position: relative;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.card {
+  position: absolute;
+  width: inherit;
+  top: 0;
+  height: 20rem;
+  padding: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: right 10% bottom 10%;
+  border-top: 0.3rem solid;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 1rem 3rem 0.1rem rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.card h2 {
+  font-weight: var(--fw-600);
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-weight: var(--fw-400);
+}
+
+.card-1 {
+  border-color: var(--clr-primary-1);
+  top: -19rem;
+  background-image: url(./images/icon-team-builder.svg);
+}
+
+.card-2 {
+  border-color: var(--clr-primary-4);
+  left: 40rem;
+  top: -8rem;
+  background-image: url(./images/icon-calculator.svg);
+}
+
+.card-3 {
+  border-color: var(--clr-primary-3);
+  top: 5rem;
+  background-image: url(./images/icon-karma.svg);
+}
+
+.card-4 {
+  border-color: var(--clr-primary-2);
+  left: -40rem;
+  top: -8rem;
+  background-image: url(./images/icon-supervisor.svg);
+}
