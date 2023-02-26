@@ -65,6 +65,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Using babel as a node/npm package
 - Precompiler/Transpiler Babel at its best, watches `./src` directory and compiles all the code in `./scripts` directory.
 - This setting doesn't modularize code, as import and export statements aren't working and babel is giving not-defined errors for require and exports.
+- Actually, we need webpack/bundler to achieve modular programming on web. for more info, read [this](https://webpack.js.org/concepts/modules/)
 
 ### Continued development
 
